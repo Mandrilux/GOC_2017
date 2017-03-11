@@ -29,9 +29,20 @@ class DefaultController extends Controller
     header("Access-Control-Allow-Methods: GET, OPTIONS");
     header("Access-Control-Allow-Origin: [MYDOMAIN]");
     $parsed_json = json_decode($response);
+    $p1 = array("");
+    $p2 = array("");
+    $p3 = array("");
     $name = $parsed_json->{'features'}[0]->{'properties'}->{'name'};
     $place = $parsed_json->{'features'}[0]->{'properties'}->{'free'};
-    $place = $parsed_json->{'features'}[0]->{'properties'}->{'meta'}->{'address'}->{'street'};
+    $addr = $parsed_json->{'features'}[0]->{'properties'}->{'meta'}->{'address'}->{'street'};
+    array_push($p1, $name, $place, $addr);
+    $name = $parsed_json->{'features'}[1]->{'properties'}->{'name'};
+    $place = $parsed_json->{'features'}[1]->{'properties'}->{'free'};
+    $addr = $parsed_json->{'features'}[1]->{'properties'}->{'meta'}->{'address'}->{'street'};
+    array_push($p2, $name, $place, $addr);
+    $name = $parsed_json->{'features'}[2]->{'properties'}->{'name'};
+    $place = $parsed_json->{'features'}[2]->{'properties'}->{'free'};
+    $addr = $parsed_json->{'features'}[2]->{'properties'}->{'meta'}->{'address'}->{'street'};
     return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json));
     }
 }
