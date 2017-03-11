@@ -53,7 +53,12 @@ function initMap(position) {
     markerCluster = new MarkerClusterer(map, markers,
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
+    function resettoto() {
+        markerCluster.setMap(null);
+    }
     refreshMap();
     var refresh = document.getElementById('refresh');
     google.maps.event.addDomListener(refresh, 'click', refreshMap);
+    var reset = document.getElementById('reset');
+    google.maps.event.addDomListener(reset, 'click', resettoto);
 }
