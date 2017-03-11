@@ -24,6 +24,14 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
+            // center: new google.maps.LatLng(49.6088233, 6.1163861),
+            styles: styleArray,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
         var markers = locations.map(function(location, i) {
             return new google.maps.Marker({
                 position: location,
@@ -31,7 +39,8 @@ function initMap(position) {
             });
         });
 
-        var markerCluster = new MarkerClusterer(map, markers);
+        var markerCluster = new MarkerClusterer(map, markers,
+        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1'});
 
     }
 
