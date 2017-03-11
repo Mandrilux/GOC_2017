@@ -10,7 +10,7 @@ var render = function()
       navigator.geolocation.getCurrentPosition(
           function(position) {
                 var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 13,
+                  zoom: 17,
                   center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                  // center: new google.maps.LatLng(49.6088233, 6.1163861),
                   styles: styleArray,
