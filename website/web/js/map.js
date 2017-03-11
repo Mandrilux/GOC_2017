@@ -8,9 +8,14 @@ var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 function initMap(position) {
     function refreshMap() {
         console.log("refresh");
+        $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
+            if (status == 'success')
+              {
+                console.log(data);
+              }
+          });
     }
 
-    console.log(position.coords.latitude, position.coords.longitude);
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
