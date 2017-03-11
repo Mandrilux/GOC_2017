@@ -14,7 +14,6 @@ var render = function()
                   console.log("refresh");
                   $.ajax({
                       url:"brick-reader:8001/api/parking/",
-                      data: { signature: authHeader },
                       type: "GET",
                       beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},
                       success: function() {console.log("res");}
