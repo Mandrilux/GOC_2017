@@ -51,7 +51,10 @@
        <script>
 	 function maPosition(position)
 	 {
-	 console.log(position);
+	 var latitude = position.coords.latitude;
+	 var longitude = position.coords.longitude;
+	 console.log(latitue);
+	 console.log(longitude);
 }
 
 if(navigator.geolocation)
