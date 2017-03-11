@@ -26,10 +26,6 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
-
-        markerCluster.setMap(null);
-        console.log("null");
-
         markers = locations.map(function(location) {
             return new google.maps.Marker({
                 position: location,
