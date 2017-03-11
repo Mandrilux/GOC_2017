@@ -24,7 +24,7 @@ var render = function()
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
 
-                location.push({lat: position.coords.latitude, lng: position.coords.longitude});
+                locations.push({lat: position.coords.latitude, lng: position.coords.longitude});
                 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
                 var markers = locations.map(function(location, i) {
