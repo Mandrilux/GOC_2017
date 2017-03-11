@@ -13,14 +13,14 @@ function initMap(position) {
         $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
             if (status == 'success')
               {
-                //console.log(data);
+                console.log(data);
                 locations = [{lat: 49.6003126, lng: 6.1132984}];
                 data.results.forEach(function(elem) {
                     locations.push({lat: elem.lat, lng: elem.lon});
                 });
                 refreshMarkers();
               }
-              setTimeout(refreshMap, 2000);
+              //setTimeout(refreshMap, 2000);
           });
     }
 
