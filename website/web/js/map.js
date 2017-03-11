@@ -3,48 +3,36 @@ var styleArray = [{      featureType: 'all',stylers: [{ saturation: -80 } ]},{fe
 var locations = [
     {lat: 49.6003126, lng: 6.1132984}
 ];
+var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 
-var render = function()
-{
-        if(navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(
-          function(position) {
+function initMap(position) {
+    function refreshMap() {
+        console.log("refresh");
+    }
 
-              function refreshMap() {
-                  console.log("refresh");
-              }
-              
-              console.log(position.coords.latitude, position.coords.longitude);
-                var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 17,
-                  center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-                 // center: new google.maps.LatLng(49.6088233, 6.1163861),
-                  styles: styleArray,
-                  streetViewControl: false,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-                });
+    console.log(position.coords.latitude, position.coords.longitude);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
+        // center: new google.maps.LatLng(49.6088233, 6.1163861),
+        styles: styleArray,
+        streetViewControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
 
-                locations.push({lat: position.coords.latitude, lng: position.coords.longitude});
-                var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    locations.push(HackatonPos);
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+        });
+    });
 
-                var markers = locations.map(function(location, i) {
-                  return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                  });
-                });
-
-                var markerCluster = new MarkerClusterer(map, markers,
-                    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
 
-                var refresh = document.getElementById('refresh');
-                google.maps.event.addDomListener(refresh, 'click', refreshMap);
-
-        }
-    );
-};
-
-function initMap() {
-    render();
+    var refresh = document.getElementById('refresh');
+    google.maps.event.addDomListener(refresh, 'click', refreshMap);
 }
