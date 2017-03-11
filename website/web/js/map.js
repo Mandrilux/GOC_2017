@@ -26,11 +26,13 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
+        resettoto();
         markers = locations.map(function(location) {
             return new google.maps.Marker({
                 position: location,
             });
         });
+
         markerCluster = new MarkerClusterer(map, markers,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
