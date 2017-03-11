@@ -12,8 +12,22 @@ var render = function()
 
               function refreshMap() {
                   console.log("refresh");
+                  httpGetAsync("brick-reader:8001/api/parking", test(res));
+              }
+              function test(res) {
+                  console.log(res);
               }
 
+              function httpGetAsync(theUrl, callback)
+              {
+                  var xmlHttp = new XMLHttpRequest();
+                  xmlHttp.onreadystatechange = function() {
+                      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                          callback(xmlHttp.responseText);
+                  };
+                  xmlHttp.open("GET", theUrl, true); // true for asynchronous
+                  xmlHttp.send(null);
+              }
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 17,
