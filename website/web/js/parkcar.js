@@ -9,6 +9,6 @@ function get3Parkcar() {
       });
 
 
-  $( document ).ready(function() {
-          console.log("document ok");
-  });
+      $( document ).ready(function() {
+          console.log( "document loaded" );
+      });
