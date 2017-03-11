@@ -7,3 +7,8 @@ function get3Parkcar() {
           }
           setTimeout(get3Parkcar, 5000);
       });
+
+
+  $( document ).ready(function() {
+          console.log("document ok");
+  });
