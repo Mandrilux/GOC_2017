@@ -4,10 +4,6 @@ var locations = [
     {lat: 49.6003126, lng: 6.1132984}
 ];
 
-if(navigator.geolocation)
-  navigator.geolocation.getCurrentPosition(initMap);
-
-
 function initMap(position) {
         console.log("myPos:" + position.coords.latitude);
 
