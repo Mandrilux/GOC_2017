@@ -18,7 +18,7 @@ from django.conf.urls import url
 from rest_framework.routers import DefaultRouter
 from rest_framework_swagger.views import get_swagger_view
 
-from parking.Routers import ParkingRouter
+from parking.routers import ParkingRouter
 from parking.views import ParkingViewSet
 
 schema_view = get_swagger_view(title='Pastebin API')

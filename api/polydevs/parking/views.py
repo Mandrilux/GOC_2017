@@ -3,6 +3,8 @@ from rest_framework import viewsets, filters
 
 from parking.models import Parking
 from parking.serializers import ParkingSerializer
+from parking.filters import FilterParking
+
 
 class MultipleFieldLookupMixin(object):
     def get_object(self):
@@ -20,4 +22,4 @@ class ParkingViewSet(MultipleFieldLookupMixin,
     serializer_class = ParkingSerializer
     filter_backends = (filters.DjangoFilterBackend,)
     lookup_fields = ('lon', 'lat',)
-    #filter_class = FilterParking
+    filter_class = FilterParking
