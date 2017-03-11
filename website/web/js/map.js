@@ -12,27 +12,9 @@ var render = function()
 
               function refreshMap() {
                   console.log("refresh");
-                  $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
-            if (status == 'success')
-              {
-console.log("OK");
-            }});
               }
-              function test(res) {
-                  console.log(res);
-              }
-
-              function httpGetAsync(theUrl, callback)
-              {
-                  var xmlHttp = new XMLHttpRequest();
-                  xmlHttp.onreadystatechange = function() {
-                      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                          callback(xmlHttp.responseText);
-                  };
-                  xmlHttp.open("GET", theUrl, true); // true for asynchronous
-                  xmlHttp.send(null);
-              }
-
+              
+              console.log(position.coords.latitude, position.coords.longitude);
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 17,
                   center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
