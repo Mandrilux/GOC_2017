@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, filters
 
 from parking.models import Parking
-from parking.serializers import ParkingSerializer
+from parking.serializers import ParkingSerializer, ParkingDetailSerializer
 from parking.filters import FilterParking
 
 
@@ -23,3 +23,8 @@ class ParkingViewSet(MultipleFieldLookupMixin,
     filter_backends = (filters.DjangoFilterBackend,)
     lookup_fields = ('lon', 'lat',)
     filter_class = FilterParking
+
+    def get_serializer_class(self):
+        if self.action is 'retrieve' or self.action is 'update' or self.action is 'delete':
+            return ParkingDetailSerializer
+        return ParkingSerializer

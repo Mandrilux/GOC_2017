@@ -2,7 +2,6 @@ from django_filters import rest_framework as filters
 
 from parking.models import Parking
 
-
 class FilterParking(filters.FilterSet):
     is_free = filters.CharFilter(method='filter_is_free')
     position = filters.CharFilter(method='filter_position')
@@ -21,4 +20,4 @@ class FilterParking(filters.FilterSet):
 
     class Meta:
         model = Parking
-        fields = ['is_free']
+        fields = ['is_free', 'position', 'size', 'book_for', 'vehicle_type']
