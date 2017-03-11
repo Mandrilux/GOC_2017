@@ -12,8 +12,13 @@ var render = function()
 
               function refreshMap() {
                   console.log("refresh");
-                  $.get("brick-reader:8001/api/parking/", function() {console.log("res");});
-                  httpGetAsync("brick-reader:8001/api/parking/", test());
+                  $.ajax({
+                      url:"brick-reader:8001/api/parking/",
+                      data: { signature: authHeader },
+                      type: "GET",
+                      beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},
+                      success: function() {console.log("res");}
+                  });
               }
               function test(res) {
                   console.log(res);
