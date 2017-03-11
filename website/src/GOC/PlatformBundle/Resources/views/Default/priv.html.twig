@@ -23,21 +23,48 @@
     </ul>
 </div>
 <div id="pages">
-  <div id="pages">
        <div id="map-container">
             <div id="map"></div>
           </div>
               <div id="inline-actions">
          <input id="refresh" type="button" value="Refresh Map" class="item"/>
               </div>
-
+              <div id="wrap-tab">
+                <div class="container">
+                  <h2>Striped Rows</h2>
+                  <p>The .table-striped class adds zebra-stripes to a table:</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                      </tr>
+                      <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                      </tr>
+                      <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
          <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
           <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
       </script>
          <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8d2n5UD6lfUH9dmTjzGpelgCeglcqpU8&callback=initMap">
          </script>
-        </div>
+
       </div>
     </body>
 </html>
