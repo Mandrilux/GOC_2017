@@ -1,0 +1,9 @@
+function get3Parkcar() {
+    console.log("refresh");
+    $.get('https://api.tfl.lu/v1/Occupancy/CarPark', function( data, status ) {
+        if (status == 'success')
+          {
+            console.log(data);
+          }
+          setTimeout(get3Parkcar, 5000);
+      });
