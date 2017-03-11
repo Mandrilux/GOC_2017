@@ -29,11 +29,8 @@ function initMap(position) {
                 position: location,
             });
         });
-        if (markerCluster !== null)
-            {
-                markerCluster.setMap(null);
-                console.log("null");
-            }
+        markerCluster.setMap(null);
+        console.log("null");
         markerCluster = new MarkerClusterer(map, markers,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
@@ -48,8 +45,13 @@ function initMap(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-    var markers;
-    var markerCluster = null;
+    var markers = locations.map(function(location) {
+        return new google.maps.Marker({
+            position: location,
+        });
+    });
+    var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
     refreshMap();
     var refresh = document.getElementById('refresh');
