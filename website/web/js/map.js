@@ -34,7 +34,7 @@ function initMap(position) {
                 markerCluster.setMap(null);
                 console.log("null");
             }
-        var markerCluster = new MarkerClusterer(map, markers,
+        markerCluster = new MarkerClusterer(map, markers,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
     }
