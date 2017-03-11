@@ -30,6 +30,8 @@ class DefaultController extends Controller
     header("Access-Control-Allow-Origin: [MYDOMAIN]");
     $parsed_json = json_decode($response);
     $name = $parsed_json->{'features'}[0]->{'properties'}->{'name'};
+    $place = $parsed_json->{'features'}[0]->{'properties'}->{'free'};
+    $place = $parsed_json->{'features'}[0]->{'properties'}->{'meta'}->{'address'}->{'street'};
     return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json));
     }
 }
