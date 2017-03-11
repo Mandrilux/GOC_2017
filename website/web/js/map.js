@@ -9,8 +9,7 @@ var myPosLng;
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
-          center: new google.maps.LatLng(myPosLat, myPosLng),
-          //center: new google.maps.LatLng(49.6088233, 6.1163861),
+          center: new google.maps.LatLng(49.6088233, 6.1163861),
           styles: styleArray,
           streetViewControl: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP
