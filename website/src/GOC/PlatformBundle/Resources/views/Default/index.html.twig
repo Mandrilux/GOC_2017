@@ -12,7 +12,49 @@
              <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 	   {% endblock %}
       </head>
-    <body>
+  <body>
+    <div class="wrapper">
+    <div class="sidebar" data-color="blue" data-image="http://www.covoitmetzlux.eu/assets/img/sidebar.jpg">
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.covoitmetzlux.eu" class="simple-text">
+                    #CoVoitMetzLux
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class=active>
+                    <a href="http://www.covoitmetzlux.eu">
+                        <i class="fa fa-home"></i>
+                        <p>Accueil</p>
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://www.covoitmetzlux.eu/login">
+                        <i class="fa fa-users"></i>
+                        <p>S'inscrire</p>
+                    </a>
+                </li>
+                <li>
+                <a href="http://www.covoitmetzlux.eu/login">
+                        <i class="fa fa-user"></i>
+                        <p>Se connecter</p>
+                    </a>
+                </li>
+                                <li >
+                    <a href="http://www.covoitmetzlux.eu/travel/search">
+                        <i class="fa fa-search"></i>
+                        <p>Rechercher un trajet</p>
+                    </a>
+                </li>
+                <li >
+                    <a href="http://www.covoitmetzlux.eu/travel/create">
+                        <i class="fa fa-car"></i>
+                        <p>Proposer un trajet</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
      <div id="map-container">
           <div id="map"></div>
         </div>
