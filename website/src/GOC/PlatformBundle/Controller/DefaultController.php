@@ -29,6 +29,7 @@ class DefaultController extends Controller
     header("Access-Control-Allow-Methods: GET, OPTIONS");
     header("Access-Control-Allow-Origin: [MYDOMAIN]");
     $parsed_json = json_decode($response);
+    $heure_cac40 = $parsed_json[0]->{'properties'}->{'name'};
         return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json));
     }
 }
