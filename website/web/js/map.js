@@ -18,7 +18,7 @@ function initMap(position) {
                 });
                 refreshMarkers();
               }
-              setTimeout(refreshMap(), 5000);
+              setTimeout(refreshMap, 5000);
           });
     }
 
