@@ -4,27 +4,31 @@ var locations = [
     {lat: 49.6003126, lng: 6.1132984}
 ];
 
-function initMap(position) {
-        console.log("myPos:" + position.coords.latitude);
+if(navigator.geolocation)
+  navigator.geolocation.getCurrentPosition(
+      function initMap(position) {
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-         // center: new google.maps.LatLng(49.6088233, 6.1163861),
-          styles: styleArray,
-          streetViewControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
+            console.log("myPos:" + position.coords.latitude);
 
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 13,
+              center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+             // center: new google.maps.LatLng(49.6088233, 6.1163861),
+              styles: styleArray,
+              streetViewControl: false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
 
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
-        });
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-}
+            var markers = locations.map(function(location, i) {
+              return new google.maps.Marker({
+                position: location,
+                label: labels[i % labels.length]
+              });
+            });
+
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    }
+);
