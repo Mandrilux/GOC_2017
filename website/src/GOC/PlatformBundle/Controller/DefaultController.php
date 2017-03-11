@@ -43,6 +43,6 @@ class DefaultController extends Controller
     $name = $parsed_json->{'features'}[2]->{'properties'}->{'name'};
     $place = $parsed_json->{'features'}[2]->{'properties'}->{'free'};
     $addr = $parsed_json->{'features'}[2]->{'properties'}->{'meta'}->{'address'}->{'street'};
-    return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json));
+    return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json, 'p1' => $p1));
     }
 }
