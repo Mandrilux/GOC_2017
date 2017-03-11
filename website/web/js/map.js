@@ -7,7 +7,7 @@ var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 
 function initMap(position) {
     function refreshMap() {
-        //console.log("refresh");
+        console.log("refresh");
         $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
             if (status == 'success')
               {
@@ -18,6 +18,7 @@ function initMap(position) {
                 });
                 refreshMarkers();
               }
+              setTimeout(refreshMap(), 5000);
           });
     }
 
