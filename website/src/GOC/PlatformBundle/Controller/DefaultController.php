@@ -13,6 +13,21 @@ class DefaultController extends Controller
 
     public function privateAction()
     {
+      url = "https://api.tfl.lu/v1/Occupancy/CarPark";
+
+    $ch = curl_init($url);
+    $options = array(
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array( $ch, $options );
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    header("Content-Type: application/json; charset=utf-8");
+    header("Access-Control-Allow-Headers: X-Requested-With");
+    header("Access-Control-Allow-Methods: GET, OPTIONS");
+    header("Access-Control-Allow-Origin: [MYDOMAIN]");
         return $this->render('GOCPlatformBundle:Default:priv.html.twig');
     }
 }
