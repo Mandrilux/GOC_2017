@@ -24,7 +24,7 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
-        markers.setMap(null);
+        google.maps.Marker().setMap(null);
         var markers = locations.map(function(location, i) {
             return new google.maps.Marker({
                 position: location,
