@@ -14,7 +14,6 @@ class FilterParking(filters.FilterSet):
     def filter_position(self, queryset, name, value):
         if value:
             tab = value.split(',')
-            print(tab)
             return queryset.filter(lon__range=(float(tab[0]) - 1, float(tab[0]) + 1), lat__range=(float(tab[1]) - 1, float(tab[1]) + 1))
         return queryset
 

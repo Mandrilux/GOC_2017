@@ -21,7 +21,7 @@ class Parking(models.Model):
     lat = models.FloatField()
     lon = models.FloatField()
     updated = models.DateTimeField(auto_now=True)
-    count = models.IntegerField(default=0)
+    frequency = models.CommaSeparatedIntegerField(max_length=7, default="0,0,0,0,0,0,0")
     size = models.CharField(
         max_length=6,
         default="Medium",
