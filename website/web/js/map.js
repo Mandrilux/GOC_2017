@@ -9,6 +9,12 @@ var render = function()
         if(navigator.geolocation)
       navigator.geolocation.getCurrentPosition(
           function(position) {
+
+              function refreshMap() {
+                  console.log("refresh");
+              }
+
+
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 17,
                   center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
@@ -18,6 +24,7 @@ var render = function()
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
 
+                location.push({lat: position.coords.latitude, lng: position.coords.longitude});
                 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
                 var markers = locations.map(function(location, i) {
@@ -29,6 +36,11 @@ var render = function()
 
                 var markerCluster = new MarkerClusterer(map, markers,
                     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
+
+                var refresh = document.getElementById('refresh');
+                google.maps.event.addDomListener(refresh, 'click', refreshMap);
+
         }
     );
 };
