@@ -30,6 +30,7 @@ html, body{
 }
 #inline-actions {
     padding-top: 10px;
+    margin:auto;
 }
 .item {
     margin-left: 20px;
