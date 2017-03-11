@@ -25,22 +25,10 @@
           center: new google.maps.LatLng(49.6075997, 6.1008508),
         });
 
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
-        });
-
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
       }
 
-      var locations = [
-      {lat: 49.6003126, lng: 6.1132984}
-      ]
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
@@ -51,10 +39,23 @@
        <script>
 	 function maPosition(position)
 	 {
+	 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	 
+	  var markers = locations.map(function(location, i) {
+	 return new google.maps.Marker({
+	 position: location,
+	 label: labels[i % labels.length]
+	 });
+	 });
+
 	 var latitude = position.coords.latitude;
 	 var longitude = position.coords.longitude;
 	 console.log(latitude);
 	 console.log(longitude);
+	  var locations = [
+ {lat: 49.6003126, lng: 6.1132984}
+ ]
+
 }
 
 if(navigator.geolocation)
