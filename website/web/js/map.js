@@ -29,7 +29,7 @@ function initMap(position) {
                 position: location,
             });
         });
-        if (markerCluster)
+        if (markerCluster !== null)
             {
                 markerCluster.setMap(null);
                 console.log("null");
@@ -49,6 +49,7 @@ function initMap(position) {
         });
 
     var markers;
+    var markerCluster = null;
 
     refreshMap();
     var refresh = document.getElementById('refresh');
