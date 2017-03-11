@@ -7,6 +7,9 @@ var myPosLat;
 var myPosLng;
 
 function initMap() {
+    if(navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(maPosition);
+
         console.log("myPos:" + myPosLat);
 
         var map = new google.maps.Map(document.getElementById('map'), {
