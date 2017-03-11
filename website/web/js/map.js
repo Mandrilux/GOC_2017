@@ -12,13 +12,11 @@ var render = function()
 
               function refreshMap() {
                   console.log("refresh");
-                  $.ajax({
-                      dataType: "json",
-                      url:"brick-reader:8001/api/parking/",
-                      type: "GET",
-                      beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},
-                      success: function() {console.log("res");}
-                  });
+                  $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
+            if (status == 'success')
+              {
+console.log("OK");
+            }});
               }
               function test(res) {
                   console.log(res);
