@@ -7,11 +7,12 @@ var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 
 function initMap(position) {
     function refreshMap() {
-        console.log("refresh");
+        //console.log("refresh");
         $.get('http://brick-reader.com:8001/api/parking/', function( data, status ) {
             if (status == 'success')
               {
-                console.log(data);
+                //console.log(data);
+                locations = [{lat: 49.6003126, lng: 6.1132984}];
                 data.results.forEach(function(elem) {
                     locations.push({lat: elem.lat, lng: elem.lon});
                 });
@@ -21,11 +22,11 @@ function initMap(position) {
     }
 
     function refreshMarkers() {
-        console.log("refreshMarkers", locations);
+        //console.log("refreshMarkers", locations);
         var markers = locations.map(function(location, i) {
             return new google.maps.Marker({
                 position: location,
-                label: labels[i % labels.length]
+                //label: labels[i % labels.length]
             });
         });
 
@@ -43,11 +44,9 @@ function initMap(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-    locations.push(HackatonPos);
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    refreshMarkers();
-
+    refreshMap();
     var refresh = document.getElementById('refresh');
     google.maps.event.addDomListener(refresh, 'click', refreshMap);
 }
