@@ -28,6 +28,6 @@ class DefaultController extends Controller
     header("Access-Control-Allow-Headers: X-Requested-With");
     header("Access-Control-Allow-Methods: GET, OPTIONS");
     header("Access-Control-Allow-Origin: [MYDOMAIN]");
-        return $this->render('GOCPlatformBundle:Default:priv.html.twig');
+        return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $response));
     }
 }
