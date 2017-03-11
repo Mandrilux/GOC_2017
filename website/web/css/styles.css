@@ -52,3 +52,11 @@ html, body{
 {
         margin-top:15px;
 }
+
+#pages
+{
+        min-height:100vh;
+         width: calc(100% - 175px);
+        margin-left:175px;
+
+}
