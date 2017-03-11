@@ -44,3 +44,18 @@ function initMap() {
         var locations = [
       {lat: 49.6003126, lng: 6.1132984}
       ];
+
+          function maPosition(position)
+          {
+ 
+ 
+ 		var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          console.log(latitude);
+          console.log(longitude);
+ 
+ }
+ 
+ if(navigator.geolocation)
+   navigator.geolocation.getCurrentPosition(maPosition);
+
