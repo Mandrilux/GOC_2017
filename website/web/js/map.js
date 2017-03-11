@@ -54,7 +54,8 @@ function initMap(position) {
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
     function resettoto() {
-        markerCluster.setMap(null);
+        markerCluster.clearMarkers();
+        markers = [];
     }
     refreshMap();
     var refresh = document.getElementById('refresh');
