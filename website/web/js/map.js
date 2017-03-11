@@ -44,7 +44,7 @@ function initMap(position) {
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-
+    markerCluster.clearMarkers();
     markers = [];
     markerCluster = new MarkerClusterer(map, markers,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
