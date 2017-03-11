@@ -7,6 +7,8 @@ var myPosLat;
 var myPosLng;
 
 function initMap() {
+        console.log("myPos:" + myPosLat);
+
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: new google.maps.LatLng(49.6088233, 6.1163861),
@@ -34,6 +36,7 @@ function initMap() {
 
           function maPosition(position)
           {
+              console.log("function");
  		    myPosLat = position.coords.latitude;
             myPosLng = position.coords.longitude;
         }
