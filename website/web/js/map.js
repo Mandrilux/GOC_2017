@@ -12,7 +12,7 @@ var render = function()
 
               function refreshMap() {
                   console.log("refresh");
-                  httpGetAsync("brick-reader:8001/api/parking", test(res));
+                  httpGetAsync("brick-reader:8001/api/parking", test());
               }
               function test(res) {
                   console.log(res);
