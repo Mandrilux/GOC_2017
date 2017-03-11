@@ -7,9 +7,6 @@ var locations = [
 if(navigator.geolocation)
   navigator.geolocation.getCurrentPosition(
       function(position) {
-
-            console.log("myPos:" + position.coords.latitude);
-
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 13,
               center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
