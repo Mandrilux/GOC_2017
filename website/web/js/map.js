@@ -4,6 +4,9 @@ var locations = [
     {lat: 49.6003126, lng: 6.1132984}
 ];
 var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
+var map;
+var markers;
+var markerCluster;
 
 function initMap(position) {
     function refreshMap() {
@@ -36,7 +39,7 @@ function initMap(position) {
 
     }
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
         // center: new google.maps.LatLng(49.6088233, 6.1163861),
@@ -45,12 +48,12 @@ function initMap(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-    var markers = locations.map(function(location) {
+    markers = locations.map(function(location) {
         return new google.maps.Marker({
             position: location,
         });
     });
-    var markerCluster = new MarkerClusterer(map, markers,
+    markerCluster = new MarkerClusterer(map, markers,
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
     refreshMap();
