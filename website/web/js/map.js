@@ -24,18 +24,10 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
-            // center: new google.maps.LatLng(49.6088233, 6.1163861),
-            styles: styleArray,
-            streetViewControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-        var markers = locations.map(function(location, i) {
+
+        markers = locations.map(function(location) {
             return new google.maps.Marker({
                 position: location,
-                //label: labels[i % labels.length]
             });
         });
 
@@ -53,7 +45,7 @@ function initMap(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var markers;
 
     refreshMap();
     var refresh = document.getElementById('refresh');
