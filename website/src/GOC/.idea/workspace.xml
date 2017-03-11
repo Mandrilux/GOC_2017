@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/PlatformBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" column="118" lean-forward="false" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
+              <caret line="14" column="111" lean-forward="false" selection-start-line="14" selection-start-column="111" selection-end-line="14" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -250,12 +250,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489241554130</updated>
-      <workItem from="1489241555769" duration="1700000" />
+      <workItem from="1489241555769" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1700000" />
+    <option name="totallyTimeSpent" value="1730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -305,7 +305,7 @@
     <entry file="file://$PROJECT_DIR$/PlatformBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="118" lean-forward="false" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
+          <caret line="14" column="111" lean-forward="false" selection-start-line="14" selection-start-column="111" selection-end-line="14" selection-end-column="111" />
           <folding />
         </state>
       </provider>
