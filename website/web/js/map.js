@@ -26,7 +26,7 @@ function initMap(position) {
 
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
-        resettoto();
+        resetMarkers();
         markers = locations.map(function(location) {
             return new google.maps.Marker({
                 position: location,
@@ -47,15 +47,7 @@ function initMap(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-    markers = locations.map(function(location) {
-        return new google.maps.Marker({
-            position: location,
-        });
-    });
-    markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
-    function resettoto() {
+    function resetMarkers() {
         markerCluster.clearMarkers();
         markers = [];
         markerCluster = new MarkerClusterer(map, markers,
@@ -63,8 +55,4 @@ function initMap(position) {
 
     }
     refreshMap();
-    var refresh = document.getElementById('refresh');
-    google.maps.event.addDomListener(refresh, 'click', refreshMap);
-    var reset = document.getElementById('reset');
-    google.maps.event.addDomListener(reset, 'click', resettoto);
 }
