@@ -12,6 +12,19 @@ function initMap(position) {
             if (status == 'success')
               {
                 console.log(data);
+                data.results.forEach(function(elem) {
+                    locations.push({lat: elem.lat, lng: elem.lon});
+                });
+                var markers = locations.map(function(location, i) {
+                    return new google.maps.Marker({
+                        position: location,
+                        label: labels[i % labels.length]
+                    });
+                });
+
+                var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
               }
           });
     }
