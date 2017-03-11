@@ -13,8 +13,12 @@
 	   {% endblock %}
       </head>
     <body>
-    <div id="map"></div>
-
+     <div id="map-container">
+          <div id="map"></div>
+        </div>
+            <div id="inline-actions">
+       <input id="refresh" type="button" value="Refresh Map" class="item"/>
+            </div>
 <script>
 function initMap() {
 
