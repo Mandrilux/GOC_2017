@@ -31,8 +31,7 @@ html, body{
 #inline-actions {
     padding-top: 10px;
     margin:auto;
-    width: 100px;
-    border:1px solid red;
+    width: 800px;
 }
 .item {
     margin-left: 20px;
