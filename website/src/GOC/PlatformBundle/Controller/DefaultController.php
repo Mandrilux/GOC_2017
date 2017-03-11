@@ -13,7 +13,7 @@ class DefaultController extends Controller
 
     public function privateAction()
     {
-      url = "https://api.tfl.lu/v1/Occupancy/CarPark";
+      $url = "https://api.tfl.lu/v1/Occupancy/CarPark";
 
     $ch = curl_init($url);
     $options = array(
