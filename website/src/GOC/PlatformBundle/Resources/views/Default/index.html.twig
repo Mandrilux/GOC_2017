@@ -13,12 +13,24 @@
 	   {% endblock %}
       </head>
   <body>
+    <div id="menu_vertical">
+      <div id="logo_menu">
+        <img src="./images/logo_menu.png">
+      </div>
+      <ul class="nav menu" >
+          <li class="active"><a href="./index.php"><span class="glyphicon glyphicon-home"><span class="special_font">  Accueil</span></span></a></li>
+    </ul>
+</div>
+<div id="pages">
+
+
      <div id="map-container">
           <div id="map"></div>
         </div>
             <div id="inline-actions">
        <input id="refresh" type="button" value="Refresh Map" class="item"/>
             </div>
+</div>
 	     <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
