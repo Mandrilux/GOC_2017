@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-extensions
+django-filter
+django-cors-headers
+pillow
+psycopg2
+bcrypt
+django-rest-swagger
+djangorestframework-filters
