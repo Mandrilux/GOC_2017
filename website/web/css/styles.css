@@ -28,3 +28,18 @@ body {
 .item {
     margin-left: 20px;
 }
+
+#menu_vertical
+{
+        float:left;
+        position:fixed;
+        min-width:175px;
+    max-width:200px;
+    height:100vh;
+        background-color:#2A2F38;
+}
+
+.menu
+{
+        margin-top:15px;
+}
