@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('GOCPlatformBundle:Default:index.html.twig');
     }
+
+    public function privateAction()
+    {
+        return $this->render('GOCPlatformBundle:Default:index.html.twig');
+    }
 }

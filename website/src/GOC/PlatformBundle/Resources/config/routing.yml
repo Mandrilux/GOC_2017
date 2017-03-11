@@ -1,3 +1,6 @@
 goc_platform_homepage:
     path:     /
     defaults: { _controller: GOCPlatformBundle:Default:index }
+goc_platform_private:
+    path:     /privpark
+    defaults: { _controller: GOCPlatformBundle:Default:private }
