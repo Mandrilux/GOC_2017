@@ -122,5 +122,5 @@ function initMap(position) {
 }
 
 function onClickHandler(cb) {
-    console.log("Click", cb);
+    console.log("Click", cb.checked);
 }
