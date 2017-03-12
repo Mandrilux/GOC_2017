@@ -121,6 +121,6 @@ function initMap(position) {
     refreshMap();
 }
 
-function onClickHandler() {
+function onClickHandler(cb) {
     console.log("Click");
 }
