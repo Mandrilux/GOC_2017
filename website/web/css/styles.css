@@ -64,5 +64,5 @@ a:hover
 {
         color: white !important;
         text-decoration : none !important;
-        background-color:red;
+        background-color: red !important;
 }
