@@ -58,6 +58,7 @@ html, body{
     min-height:100vh;
     width: calc(100% - 175px);
     margin-left:175px;
+    background-color:#F1F1F1;
 }
 
 a{
