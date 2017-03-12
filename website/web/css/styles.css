@@ -37,7 +37,10 @@ html, body{
 }
 .item {
     margin-left: 20px;
-    margin-bottom:20px;
+}
+
+.box{
+  margin-bottom:20px;
 }
 
 .it:hover {
