@@ -34,6 +34,7 @@ html, body{
     width: 800px;
     background-color:#0072A4;
     margin-top:30px;
+    height: 50px;
 }
 .item {
     margin-left: 20px;
