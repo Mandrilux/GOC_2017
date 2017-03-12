@@ -27,7 +27,7 @@ class DefaultController extends Controller
     header("Content-Type: application/json; charset=utf-8");
     header("Access-Control-Allow-Headers: X-Requested-With");
     header("Access-Control-Allow-Methods: GET, OPTIONS");
-    header("Access-Control-Allow-Origin: [MYDOMAIN]");
+    header("Access-Control-Allow-Origin: *");
     $parsed_json = json_decode($response);
     $p1 = array("");
     $p2 = array("");
