@@ -13,7 +13,7 @@ function initMap(position) {
             if (status == 'success')
               {
                 console.log(data);
-                locations = [{elem: {lat: 49.6003126, lng: 6.1132984}}];
+                locations = [{{lat: 49.6003126, lng: 6.1132984}}];
                 data.results.forEach(function(elem) {
                     locations.push(elem);
                 });
