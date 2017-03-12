@@ -1,9 +1,8 @@
 var styleArray = [{      featureType: 'all',stylers: [{ saturation: -80 } ]},{featureType: 'road.arterial',elementType: 'geometry',stylers: [{ hue: '#00ffee' },{ saturation: 50 }      ]},{featureType: 'poi.business',elementType: 'labels',stylers: [{ visibility: 'off' }]}];
 
 var locations = [
-    {lat: 49.6003126, lng: 6.1132984}
 ];
-var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
+var HackatonPos = {elem: {lat: 49.600261599999996, lng: 6.1129177} };
 var map;
 var markers;
 var markerCluster;
@@ -20,7 +19,7 @@ function initMap(position) {
                 });
                 refreshMarkers();
               }
-              //setTimeout(refreshMap, 2000);
+              setTimeout(refreshMap, 2000);
           });
     }
 
