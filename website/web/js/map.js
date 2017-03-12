@@ -6,7 +6,7 @@ var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 var map;
 var markers;
 var markerCluster;
-var onlyFree = getElementById("OnlyFree").checked;
+var onlyFree = document.getElementById("OnlyFree").checked;
 
 function initMap(position) {
     function refreshMap() {
