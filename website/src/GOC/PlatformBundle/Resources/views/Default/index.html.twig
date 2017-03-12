@@ -18,7 +18,7 @@
         <img src="">
       </div>
       <ul class="nav menu" >
-          <li class="it"><a href="./"><span class="glyphicon glyphicon-home"> Welcome</span></a></li>
+          <li class="active it"><a href="./"><span class="glyphicon glyphicon-home"> Welcome</span></a></li>
           <li class="active it"><a href="./privpark"><span class="glyphicon glyphicon-road"> Private parking</span></a></li>
     </ul>
 </div>
@@ -26,9 +26,23 @@
      <div id="map-container">
           <div id="map"></div>
         </div>
+
+
+
+
+
             <div id="inline-actions">
-                <label for="OnlyFree">Only free</label>
-       <input id="OnlyFree" name="OnlyFree" type="checkbox" onclick="onClickHandler(this)" class="item"/>
+              <section title=".slideThree">
+                  <!-- .slideThree -->
+                  <label for="OnlyFree">Only free</label>
+                  <div class="slideThree">
+                    <input type="checkbox" value="None" id="slideThree OnlyFree" name="OnlyFree" checked onclick="onClickHandler(this)" class="item"/>
+                    <label for="slideThree"></label>
+                  </div>
+                  <!-- end .slideThree -->
+                </section>
+
+       <!--<input id="OnlyFree" name="OnlyFree" type="checkbox">-->
         <select onchange="onChangeHandler(this)" id="type" name="type">
             <option value="">All</option>
             <option value="Car">Car</option>
