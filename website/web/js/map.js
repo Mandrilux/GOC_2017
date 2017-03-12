@@ -30,7 +30,7 @@ function initMap(position) {
             console.log(elem);
             return new google.maps.Marker({
                 position: {lat: elem.lat, lng: elem.lon},
-                icon: '/website/web/img/electric-car.png'
+                icon: '/GOC_2017/website/web/img/electric-car.png'
             });
         });
 
