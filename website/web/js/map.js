@@ -6,9 +6,10 @@ var HackatonPos = {lat: 49.600261599999996, lng: 6.1129177};
 var map;
 var markers;
 var markerCluster;
-var onlyFree = document.getElementById("OnlyFree").checked;
+var onlyFree;
 
 function initMap(position) {
+    onlyFree = document.getElementById("OnlyFree").checked;
     function refreshMap() {
         $.get('http://brick-reader.com:8001/api/parking/?is_free=' + onlyFree ? "True" : "", function( data, status ) {
             if (status == 'success')
