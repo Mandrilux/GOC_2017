@@ -30,7 +30,41 @@ function initMap(position) {
             console.log(elem);
             return new google.maps.Marker({
                 position: {lat: elem.lat, lng: elem.lon},
-                icon: '/GOC_2017/website/web/img/electric-car.png'
+                if (elem.vehicle_type == "Truck")
+                {
+                    if (elem.if_free === true)
+                        icon: '/GOC_2017/website/web/img/delivery-truck-frontA.png';
+                    else
+                        icon: '/GOC_2017/website/web/img/delivery-truck-frontD.png';
+                    }
+                else if (elem.vehicle_type == "Car" && elem.book_for == "Default")
+                {
+                    if (elem.if_free === true)
+                        icon: '/GOC_2017/website/web/img/sports-carA.png';
+                    else
+                    icon: '/GOC_2017/website/web/img/sports-carD.png';
+                }
+                else if (elem.vehicle_type == "Car" && elem.book_for == "Electric")
+                {
+                    if (elem.if_free === true)
+                        icon: '/GOC_2017/website/web/img/electric-carA.png';
+                    else
+                    icon: '/GOC_2017/website/web/img/electric-carD.png';
+                }
+                else if (elem.vehicle_type == "Car" && elem.book_for == "Disabled")
+                {
+                    if (elem.if_free === true)
+                        icon: '/GOC_2017/website/web/img/silhouette-on-wheelchairA.png';
+                    else
+                    icon: '/GOC_2017/website/web/img/silhouette-on-wheelchairD.png';
+                }
+                else if (elem.vehicle_type == "MotoCycle")
+                {
+                    if (elem.if_free === true)
+                        icon: '/GOC_2017/website/web/img/scooter-front-viewA.png';
+                    else
+                    icon: '/GOC_2017/website/web/img/scooter-front-viewD.png';
+                }
             });
         });
 
