@@ -19,7 +19,7 @@ function initMap(position) {
                 });
                 refreshMarkers();
               }
-              setTimeout(refreshMap, 2000);
+              //setTimeout(refreshMap, 2000);
           });
     }
 
