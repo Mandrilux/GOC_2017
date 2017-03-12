@@ -16,7 +16,7 @@ function initMap(position) {
                 console.log(data);
                 locations = [{lat: 49.6003126, lng: 6.1132984}];
                 data.results.forEach(function(elem) {
-                    locations.push({lat: elem.lat, lng: elem.lon});
+                    locations.push(elem);
                 });
                 refreshMarkers();
               }
@@ -27,9 +27,9 @@ function initMap(position) {
     function refreshMarkers() {
         //console.log("refreshMarkers", locations);
         resetMarkers();
-        markers = locations.map(function(location) {
+        markers = locations.map(function(elem) {
             return new google.maps.Marker({
-                position: location,
+                position: {lat: elem.lat, lng: elem.lon},
             });
         });
 
