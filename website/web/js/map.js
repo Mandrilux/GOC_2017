@@ -10,7 +10,7 @@ var onlyFree = false;
 
 function initMap(position) {
     function refreshMap() {
-        $.get('http://brick-reader.com:8001/api/parking/?is_free=' + onlyFree ? "True" : "", function( data, status ) {
+        $.get('http://brick-reader.com:8001/api/parking/?is_free=' + "True" , function( data, status ) {
             if (status == 'success')
               {
                 //console.log(data);
