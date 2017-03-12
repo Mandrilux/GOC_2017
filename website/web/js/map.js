@@ -137,7 +137,7 @@ function onClickHandler(cb) {
     refreshMap(false);
 }
 
-function onChangeHandhler(sel) {
+function onChangeHandler(sel) {
     type = sel.value;
     console.log(sel, type);
     refreshMap(false);
