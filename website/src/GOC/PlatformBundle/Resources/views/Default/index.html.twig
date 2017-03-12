@@ -29,6 +29,10 @@
             <div id="inline-actions">
                 <label for="OnlyFree">Only free</label>
        <input id="OnlyFree" name="OnlyFree" type="checkbox" onclick="onClickHandler(this)" class="item"/>
+        <select onchange="onChangeHandler(this)" id="type" name="type">
+            <option value="">Tout</option>
+            <option value="Car">Voiture</option>
+        </select>
             </div>
 
 	     <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>

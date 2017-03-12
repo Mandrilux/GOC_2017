@@ -7,15 +7,15 @@ var map;
 var markers;
 var markerCluster;
 var onlyFree = false;
+var type = "";
 
 function initMap(position) {
     onlyFree = document.getElementById("OnlyFree").checked;
-
+    type = document.getElementById("type").value;
 
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: new google.maps.LatLng(HackatonPos.lat, HackatonPos.lng),
-        // center: new google.maps.LatLng(49.6088233, 6.1163861),
         styles: styleArray,
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -134,5 +134,11 @@ function refreshMarkers() {
 
 function onClickHandler(cb) {
     onlyFree = cb.checked;
+    refreshMap(false);
+}
+
+function onChangeHandhler(sel) {
+    type = sel.value;
+    console.log(sel, type);
     refreshMap(false);
 }
