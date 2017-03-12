@@ -59,3 +59,9 @@ html, body{
     width: calc(100% - 175px);
     margin-left:175px;
 }
+
+a:hover
+{
+        color: white !important;
+        text-decoration : none !important;
+}
