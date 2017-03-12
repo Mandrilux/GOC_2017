@@ -27,24 +27,17 @@ function initMap(position) {
         //console.log("refreshMarkers", locations);
         resetMarkers();
         markers = locations.map(function(elem) {
-            console.log(elem);
                 if (elem.vehicle_type == "Truck")
-                {
-                    console.log("truck");
                     if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                                         icon: '/GOC_2017/website/web/img/delivery-truck-frontA.png'
                                     });
                     else
-                    {
-                        console.log("Truck not free");
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                             icon: '/GOC_2017/website/web/img/delivery-truck-frontD.png'
                         });
-                    }
-                }
                 else if (elem.vehicle_type == "Car" && elem.book_for == "Default")
                 {
                     if (elem.is_free === true)
@@ -103,8 +96,6 @@ function initMap(position) {
                 });
                 }
             });
-
-            console.log(markers);
         markerCluster = new MarkerClusterer(map, markers,
         {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
