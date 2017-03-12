@@ -13,8 +13,12 @@ function initMap(position) {
     function refreshMap() {
         console.log(onlyFree);
         var toto = "";
-        if (OnlyFree)
+        if (OnlyFree === true)
+        {
+            console.log("freeedom" + onlyFree);
             toto = "True";
+        }
+        
         $.get('http://brick-reader.com:8001/api/parking/?is_free=' + toto , function( data, status ) {
             if (status == 'success')
               {
