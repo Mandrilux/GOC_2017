@@ -37,8 +37,8 @@ html, body{
     margin-left: 20px;
 }
 
-.it:hover{
-  background-color:red;
+.it:hover {
+  background-color:red !important;;
 }
 
 #menu_vertical{
