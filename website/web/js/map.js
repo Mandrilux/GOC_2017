@@ -15,7 +15,7 @@ function initMap(position) {
         $.get('http://brick-reader.com:8001/api/parking/?is_free=' + onlyFree === true ? "True" : "" , function( data, status ) {
             if (status == 'success')
               {
-                //console.log(data);
+                console.log(data);
                 locations = [{lat: 49.6003126, lon: 6.1132984}];
                 data.results.forEach(function(elem) {
                     locations.push(elem);
