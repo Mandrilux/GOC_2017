@@ -11,14 +11,12 @@ var onlyFree = false;
 function initMap(position) {
     onlyFree = document.getElementById("OnlyFree").checked;
     function refreshMap() {
-        console.log(onlyFree);
         var toto = "";
         if (onlyFree === true)
             toto = "True";
         $.get('http://brick-reader.com:8001/api/parking/?is_free=' + toto , function( data, status ) {
             if (status == 'success')
               {
-                console.log(data);
                 locations = [{lat: 49.6003126, lon: 6.1132984}];
                 data.results.forEach(function(elem) {
                     locations.push(elem);
@@ -125,9 +123,10 @@ function initMap(position) {
 
     }
     refreshMap();
+    
+}
 
-    function onClickHandler(cb) {
-        onlyFree = cb.checked;
-        refreshMap();
-    }
+function onClickHandler(cb) {
+    onlyFree = cb.checked;
+    refreshMap();
 }
