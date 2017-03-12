@@ -30,7 +30,7 @@ function refreshMap(isRestart) {
     var toto = "";
     if (onlyFree === true)
         toto = "True";
-    $.get('http://brick-reader.com:8001/api/parking/?is_free=' + toto , function( data, status ) {
+    $.get('http://brick-reader.com:8001/api/parking/?is_free=' + toto + '&vehicle_type=' + type , function( data, status ) {
         if (status == 'success')
           {
             locations = [{lat: 49.6003126, lon: 6.1132984}];
@@ -139,6 +139,7 @@ function onClickHandler(cb) {
 
 function onChangeHandler(sel) {
     type = sel.value;
-    console.log(sel, type);
+    if (type == "Electric" || type == "Disabled")
+        type = "Car&book_for=" + sel.value;
     refreshMap(false);
 }
