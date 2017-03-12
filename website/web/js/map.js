@@ -14,11 +14,7 @@ function initMap(position) {
         console.log(onlyFree);
         var toto = "";
         if (onlyFree === true)
-        {
-            console.log("freeedom" + onlyFree);
             toto = "True";
-        }
-
         $.get('http://brick-reader.com:8001/api/parking/?is_free=' + toto , function( data, status ) {
             if (status == 'success')
               {
@@ -129,8 +125,9 @@ function initMap(position) {
 
     }
     refreshMap();
-}
 
-function onClickHandler(cb) {
-    onlyFree = cb.checked;
+    function onClickHandler(cb) {
+        onlyFree = cb.checked;
+        refreshMap();
+    }
 }
