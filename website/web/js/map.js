@@ -30,7 +30,7 @@ function initMap(position) {
             console.log(elem);
                 if (elem.vehicle_type == "Truck")
                 {
-                    if (elem.if_free === true)
+                    if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                                         icon: '/GOC_2017/website/web/img/delivery-truck-frontA.png'
@@ -43,7 +43,7 @@ function initMap(position) {
                 }
                 else if (elem.vehicle_type == "Car" && elem.book_for == "Default")
                 {
-                    if (elem.if_free === true)
+                    if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                             icon: '/GOC_2017/website/web/img/sports-carA.png'
@@ -56,7 +56,7 @@ function initMap(position) {
                 }
                 else if (elem.vehicle_type == "Car" && elem.book_for == "Electric")
                 {
-                    if (elem.if_free === true)
+                    if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                         icon: '/GOC_2017/website/web/img/electric-carA.png'
@@ -69,7 +69,7 @@ function initMap(position) {
                 }
                 else if (elem.vehicle_type == "Car" && elem.book_for == "Disabled")
                 {
-                    if (elem.if_free === true)
+                    if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                             icon: '/GOC_2017/website/web/img/silhouette-on-wheelchairA.png'
@@ -82,7 +82,7 @@ function initMap(position) {
                 }
                 else if (elem.vehicle_type == "MotoCycle")
                 {
-                    if (elem.if_free === true)
+                    if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                             icon: '/GOC_2017/website/web/img/scooter-front-viewA.png'
