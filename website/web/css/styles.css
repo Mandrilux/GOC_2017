@@ -37,6 +37,10 @@ html, body{
     margin-left: 20px;
 }
 
+.ite:hover{
+  background-color:red;
+}
+
 #menu_vertical{
   float:left;
   position:fixed;
