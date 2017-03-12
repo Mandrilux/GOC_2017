@@ -11,6 +11,11 @@ class DefaultController extends Controller
         return $this->render('GOCPlatformBundle:Default:index.html.twig');
     }
 
+    public function apkAction()
+    {
+        return $this->render('GOCPlatformBundle:Default:apk.html.twig');
+    }
+
     public function privateAction()
     {
       $url = "https://api.tfl.lu/v1/Occupancy/CarPark";

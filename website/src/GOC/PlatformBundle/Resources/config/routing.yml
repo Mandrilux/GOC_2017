@@ -4,3 +4,6 @@ goc_platform_homepage:
 goc_platform_private:
     path:     /privpark
     defaults: { _controller: GOCPlatformBundle:Default:private }
+goc_platform_application:
+    path:    /apk
+    defaults: { _controller: GOCPlatformBundle:Default:apk }
