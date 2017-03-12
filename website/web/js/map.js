@@ -97,6 +97,11 @@ function initMap(position) {
                         icon: '/GOC_2017/website/web/img/scooter-front-viewD.png'
                     });
                 }
+                else {
+                    return new google.maps.Marker({
+                        position: {lat: elem.lat, lng: elem.lon},
+                });
+                }
             });
 
             console.log(markers);
