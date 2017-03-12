@@ -12,7 +12,7 @@ function initMap(position) {
     onlyFree = document.getElementById("OnlyFree").checked;
     function refreshMap() {
         console.log(onlyFree);
-        $.get('http://brick-reader.com:8001/api/parking/?is_free=' + "True" , function( data, status ) {
+        $.get('http://brick-reader.com:8001/api/parking/?is_free=' + onlyFree === true ? "True" : "" , function( data, status ) {
             if (status == 'success')
               {
                 //console.log(data);
