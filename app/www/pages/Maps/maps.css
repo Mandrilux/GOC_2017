@@ -1,0 +1,35 @@
+
+.center {
+  width: 100%;
+  margin: auto;
+  float: none;
+  color: white;
+}
+
+.alignbutton {
+  margin-top: 7%;
+}
+
+.body {
+  background-color: #009688;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.takebutton {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.height {
+  padding-top: 10px;
+  height: 50px;
+}
+
+.aligncenter {
+  width: 100%;
+  margin-top: -25%;
+}
+
+#map { height: 90%;  }

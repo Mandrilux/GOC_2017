@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="../../lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="../../lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="../../lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+
+  <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="signin.css" rel="stylesheet">
+  <style type="text/css">
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #map { height: 100%; }
+  </style>
+
+</head>
+
+<body class="body">
+  <div class="navigation-bar navigation-bar--material">
+    <div class="navigation-bar__center navigation-bar--material__center">
+    </div>
+  </div>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+
+
+
+      function initMap() {
+        var styleArray = [
+            {
+              featureType: 'all',
+              stylers: [
+                { saturation: -80 }
+              ]
+            },{
+              featureType: 'road.arterial',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#00ffee' },
+                { saturation: 50 }
+              ]
+            },{
+              featureType: 'poi.business',
+              elementType: 'labels',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }
+          ];
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: {lat: 49.611622, lng: 6.131935},
+          styles: styleArray
+        });
+
+
+        var i = 0;
+
+            var marker = new google.maps.Marker({
+          position: {lat: 49.611622, lng: 6.131935},
+          map: map,
+          icon: '../../img/placeholder.png',
+          title: 'Hello World!'
+        });
+        marker.addListener('click', toggleBounce);
+
+        function toggleBounce() {
+          if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+          } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        }
+
+    }
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADclE6oMO1py4IFFAoJGDpKzijB5F7g_g&callback=initMap">
+    </script>
+
+
+
+
+
+  <div class="container alignbutton">
+    <div class="row">
+      <div class="col-xs-12">
+        <button onclick="window.location.href='../Menu/menu.html'" class="button button--large center">SIGN IN</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../lib/bootstrap/js/jquery.js"></script>
+  <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
