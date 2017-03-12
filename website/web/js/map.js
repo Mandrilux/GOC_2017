@@ -30,16 +30,20 @@ function initMap(position) {
             console.log(elem);
                 if (elem.vehicle_type == "Truck")
                 {
+                    console.log("truck");
                     if (elem.is_free === true)
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                                         icon: '/GOC_2017/website/web/img/delivery-truck-frontA.png'
                                     });
                     else
+                    {
+                        console.log("Truck not free");
                         return new google.maps.Marker({
                             position: {lat: elem.lat, lng: elem.lon},
                             icon: '/GOC_2017/website/web/img/delivery-truck-frontD.png'
                         });
+                    }
                 }
                 else if (elem.vehicle_type == "Car" && elem.book_for == "Default")
                 {
