@@ -60,6 +60,9 @@ html, body{
     margin-left:175px;
 }
 
+a{
+  color: white !important;
+}
 a:hover
 {
         color: white !important;
