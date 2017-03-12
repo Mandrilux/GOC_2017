@@ -32,12 +32,12 @@ html, body{
     padding-top: 10px;
     margin:auto;
     width: 800px;
-    /*background-color:#0072A4; */
     margin-top:30px;
-    height: 50px;
+    height: 70px;
 }
 .item {
     margin-left: 20px;
+    margin-bottom:20px;
 }
 
 .it:hover {
