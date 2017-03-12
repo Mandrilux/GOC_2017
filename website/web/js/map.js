@@ -28,6 +28,7 @@ function initMap(position) {
         //console.log("refreshMarkers", locations);
         resetMarkers();
         markers = locations.map(function(elem) {
+            console.log(elem);
             return new google.maps.Marker({
                 position: {lat: elem.lat, lng: elem.lon},
             });
