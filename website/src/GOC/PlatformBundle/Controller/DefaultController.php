@@ -2,6 +2,7 @@
 
 namespace GOC\PlatformBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -13,8 +14,8 @@ class DefaultController extends Controller
 
     public function apkAction()
     {
-      $response = new BinaryFileResponse('path/to/pdf.pdf');
-      $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,'pdf.pdf');
+      $response = new BinaryFileResponse('AllPlace.apk');
+      $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,'AllPlace.apk');
       return $response;
         //return $this->render('GOCPlatformBundle:Default:apk.html.twig');
     }
