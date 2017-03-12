@@ -13,7 +13,10 @@ class DefaultController extends Controller
 
     public function apkAction()
     {
-        return $this->render('GOCPlatformBundle:Default:apk.html.twig');
+      $response = new BinaryFileResponse('path/to/pdf.pdf');
+      $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,'pdf.pdf');
+      return $response;
+        //return $this->render('GOCPlatformBundle:Default:apk.html.twig');
     }
 
     public function privateAction()
