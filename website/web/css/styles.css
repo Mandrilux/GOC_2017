@@ -33,6 +33,7 @@ html, body{
     margin:auto;
     width: 800px;
     background-color:#0072A4;
+    border-top:30px;
 }
 .item {
     margin-left: 20px;
