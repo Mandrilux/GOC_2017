@@ -19,7 +19,7 @@ function initMap(position) {
                 });
                 refreshMarkers();
               }
-              setTimeout(refreshMap, 2000);
+              //setTimeout(refreshMap, 2000);
           });
     }
 
@@ -28,7 +28,6 @@ function initMap(position) {
         resetMarkers();
         markers = locations.map(function(elem) {
             console.log(elem);
-
                 if (elem.vehicle_type == "Truck")
                 {
                     if (elem.if_free === true)
