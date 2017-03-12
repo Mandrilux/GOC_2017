@@ -32,6 +32,7 @@ html, body{
     padding-top: 10px;
     margin:auto;
     width: 800px;
+    background-color:white;
 }
 .item {
     margin-left: 20px;
