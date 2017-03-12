@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="refresh" content="3">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
    <script src="https://maxcdn.boot
@@ -9,9 +10,9 @@
    strapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/bootbox/4.4.0/bootbox.min.js"></script>
    <meta charset="utf-8">
-        <title>Polydevs</title>
 	{% block stylesheets %}
              <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+             <title>Polydevs</title>
 	   {% endblock %}
       </head>
   <body>
@@ -37,39 +38,37 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th>Parking</th>
+                        <th></th>
                         <th>Adresse</th>
                         <th>Place libre</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Parking de la croix</td>
-                        <td>""</td>
-                        <td>278</td>
+                        <td>{{p1[1]}}</td>
+                        <td>{{p1[3]}}</td>
+                        <td>{{p1[2]}}</td>
                       </tr>
                       <tr>
-                        <td>Parking de la santé</td>
-                        <td>""</td>
-                        <td>78</td>
+                        <td>{{p2[1]}}</td>
+                        <td>{{p2[3]}}</td>
+                        <td>{{p2[2]}}</td>
                       </tr>
                       <tr>
-                        <td>Parking George de la tour</td>
-                        <td>""</td>
-                        <td>788</td>
+                        <td>{{p3[1]}}</td>
+                        <td>{{p3[3]}}</td>
+                        <td>{{p3[2]}}</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-              {{dump(p1)}}
          <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
           <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
       </script>
          <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8d2n5UD6lfUH9dmTjzGpelgCeglcqpU8&callback=initMap">
          </script>
-
       </div>
     </body>
 </html>

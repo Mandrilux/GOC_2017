@@ -27,7 +27,7 @@ class DefaultController extends Controller
     header("Content-Type: application/json; charset=utf-8");
     header("Access-Control-Allow-Headers: X-Requested-With");
     header("Access-Control-Allow-Methods: GET, OPTIONS");
-    header("Access-Control-Allow-Origin: [MYDOMAIN]");
+    header("Access-Control-Allow-Origin: *");
     $parsed_json = json_decode($response);
     $p1 = array("");
     $p2 = array("");
@@ -43,6 +43,7 @@ class DefaultController extends Controller
     $name = $parsed_json->{'features'}[2]->{'properties'}->{'name'};
     $place = $parsed_json->{'features'}[2]->{'properties'}->{'free'};
     $addr = $parsed_json->{'features'}[2]->{'properties'}->{'meta'}->{'address'}->{'street'};
-    return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json, 'p1' => $p1));
+    array_push($p3, $name, $place, $addr);
+    return $this->render('GOCPlatformBundle:Default:priv.html.twig', array('rep' => $parsed_json, 'p1' => $p1, 'p2'=> $p2, 'p3'=> $p3));
     }
 }
