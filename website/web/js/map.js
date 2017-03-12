@@ -62,24 +62,24 @@ function refreshMarkers() {
                 if (elem.is_free === true)
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                                    icon: '/GOC_2017/website/web/img/delivery-truck-frontA.png'
+                                    icon: './img/delivery-truck-frontA.png'
                                 });
                 else
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                        icon: '/GOC_2017/website/web/img/delivery-truck-frontD.png'
+                        icon: './img/delivery-truck-frontD.png'
                     });
             else if (elem.vehicle_type == "Car" && elem.book_for == "Default")
             {
                 if (elem.is_free === true)
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                        icon: '/GOC_2017/website/web/img/sports-carA.png'
+                        icon: './img/sports-carA.png'
                     });
                 else
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                        icon: '/GOC_2017/website/web/img/sports-carD.png'
+                        icon: './img/sports-carD.png'
                     });
             }
             else if (elem.vehicle_type == "Car" && elem.book_for == "Electric")
@@ -87,12 +87,12 @@ function refreshMarkers() {
                 if (elem.is_free === true)
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                    icon: '/GOC_2017/website/web/img/electric-carA.png'
+                    icon: './img/electric-carA.png'
                 });
                 else
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                    icon: '/GOC_2017/website/web/img/electric-carD.png'
+                    icon: './img/electric-carD.png'
                 });
             }
             else if (elem.vehicle_type == "Car" && elem.book_for == "Disabled")
@@ -100,12 +100,12 @@ function refreshMarkers() {
                 if (elem.is_free === true)
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                        icon: '/GOC_2017/website/web/img/silhouette-on-wheelchairA.png'
+                        icon: './web/img/silhouette-on-wheelchairA.png'
                     });
                 else
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                    icon: '/GOC_2017/website/web/img/silhouette-on-wheelchairD.png'
+                    icon: './web/img/silhouette-on-wheelchairD.png'
                 });
             }
             else if (elem.vehicle_type == "MotoCycle")
@@ -113,12 +113,12 @@ function refreshMarkers() {
                 if (elem.is_free === true)
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                        icon: '/GOC_2017/website/web/img/scooter-front-viewA.png'
+                        icon: './web/img/scooter-front-viewA.png'
                     });
                 else
                     return new google.maps.Marker({
                         position: {lat: elem.lat, lng: elem.lon},
-                    icon: '/GOC_2017/website/web/img/scooter-front-viewD.png'
+                    icon: './web/img/scooter-front-viewD.png'
                 });
             }
             else {
