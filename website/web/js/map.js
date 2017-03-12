@@ -22,11 +22,11 @@ function initMap(position) {
         });
 
 
-    refreshMap();
+    refreshMap(true);
 
 }
 
-function refreshMap() {
+function refreshMap(isRestart) {
     var toto = "";
     if (onlyFree === true)
         toto = "True";
@@ -39,7 +39,8 @@ function refreshMap() {
             });
             refreshMarkers();
           }
-          setTimeout(refreshMap, 2000);
+          if (isRestart)
+            setTimeout(refreshMap, 2000);
       });
 }
 
@@ -133,5 +134,5 @@ function refreshMarkers() {
 
 function onClickHandler(cb) {
     onlyFree = cb.checked;
-    refreshMap();
+    refreshMap(false);
 }
